@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+    <style>
+        button {
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- fun 1 -->
+    <h1>Hello, Events!</h1>
+    <h1 onclick="this.innerHTML ='I am changed because you clicked on me!'">Click on Me and See the magic of HTML Events!</h1>
+    <hr>
+    <!-- fun 2 -->
+    <h1>Javascript HTML Events</h1>
+    <h2>The Onclick Attribute</h2>
+    <p>Click on the button below and see how Javascript's function make a page interactive!</p>
+    <button onclick="displayDate()">Time Now is:</button>
+
+    <script>
+        function displayDate(){
+            document.getElementById('dateAndTime').innerHTML = Date();
+        }
+    </script>
+
+    <p id="dateAndTime"></p>
+    <hr>
+    <!-- fun 3 -->
+     <h1>addEventListener!</h1>
+     <h2>Tried the above function with addEventListener method!</h2>
+     <button id="btn-2">Click to know the time.</button>
+     <p id="dateAndTime-2"></p>
+     <script>
+        document.getElementById('btn-2').addEventListener("click", displayDate2);
+        function displayDate2(){
+            document.getElementById('dateAndTime-2').innerHTML = Date();
+        }
+     </script>
+     <hr>
+     <button onclick="alertMe()">Click for feedback.</button>
+     <!-- fun 4 -->
+      <script src="events.js"></script>
+      
+</body>
+</html>
